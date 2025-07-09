@@ -1,0 +1,6 @@
+com\citasmedicas\service\PacienteServiceTest.class
+com\citasmedicas\controller\MedicoControllerTest.class
+com\citasmedicas\service\MedicoServiceTest.class
+com\citasmedicas\controller\PacienteControllerTest.class
+com\citasmedicas\service\CitaServiceTest.class
+com\citasmedicas\controller\CitaControllerTest.class

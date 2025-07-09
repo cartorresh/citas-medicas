@@ -1,0 +1,13 @@
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\CitasmedicasApplication.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\controller\CitaController.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\controller\MedicoController.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\controller\PacienteController.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\model\Cita.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\model\Medico.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\model\Paciente.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\repository\CitaRepository.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\repository\MedicoRepository.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\repository\PacienteRepository.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\service\CitaService.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\service\MedicoService.java
+C:\Users\Carlo\Desktop\citasmedicas\src\main\java\com\citasmedicas\service\PacienteService.java

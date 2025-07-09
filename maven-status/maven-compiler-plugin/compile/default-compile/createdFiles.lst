@@ -1,0 +1,13 @@
+com\citasmedicas\service\MedicoService.class
+com\citasmedicas\controller\CitaController.class
+com\citasmedicas\repository\PacienteRepository.class
+com\citasmedicas\controller\PacienteController.class
+com\citasmedicas\model\Medico.class
+com\citasmedicas\controller\MedicoController.class
+com\citasmedicas\repository\MedicoRepository.class
+com\citasmedicas\repository\CitaRepository.class
+com\citasmedicas\service\PacienteService.class
+com\citasmedicas\service\CitaService.class
+com\citasmedicas\CitasmedicasApplication.class
+com\citasmedicas\model\Paciente.class
+com\citasmedicas\model\Cita.class

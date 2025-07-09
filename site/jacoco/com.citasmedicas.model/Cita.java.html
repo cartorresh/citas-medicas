@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cita.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">citasmedicas</a> &gt; <a href="index.source.html" class="el_package">com.citasmedicas.model</a> &gt; <span class="el_source">Cita.java</span></div><h1>Cita.java</h1><pre class="source lang-java linenums">package com.citasmedicas.model;
+
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
+
+@Entity
+<span class="fc" id="L17">public class Cita {</span>
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Future(message = &quot;La fecha de la cita debe estar en el futuro&quot;)
+    @NotNull(message = &quot;La fecha es obligatoria&quot;)
+    private LocalDateTime fechaHora;
+
+  @ManyToOne
+@JoinColumn(name = &quot;medico_id&quot;)
+@JsonIgnoreProperties(&quot;citas&quot;)
+private Medico medico;
+
+@ManyToOne
+@JoinColumn(name = &quot;paciente_id&quot;)
+@JsonIgnoreProperties(&quot;citas&quot;)
+private Paciente paciente;
+
+
+    // Getters y Setters
+    public Long getId() {
+<span class="nc" id="L40">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="nc" id="L44">        this.id = id;</span>
+<span class="nc" id="L45">    }</span>
+
+    public LocalDateTime getFechaHora() {
+<span class="nc" id="L48">        return fechaHora;</span>
+    }
+
+    public void setFechaHora(LocalDateTime fechaHora) {
+<span class="nc" id="L52">        this.fechaHora = fechaHora;</span>
+<span class="nc" id="L53">    }</span>
+
+    public Paciente getPaciente() {
+<span class="nc" id="L56">        return paciente;</span>
+    }
+
+    public void setPaciente(Paciente paciente) {
+<span class="fc" id="L60">        this.paciente = paciente;</span>
+<span class="fc" id="L61">    }</span>
+
+    public Medico getMedico() {
+<span class="nc" id="L64">        return medico;</span>
+    }
+
+    public void setMedico(Medico medico) {
+<span class="fc" id="L68">        this.medico = medico;</span>
+<span class="fc" id="L69">    }</span>
+
+    public void setMotivo(String chequeo_general) {
+<span class="nc" id="L72">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

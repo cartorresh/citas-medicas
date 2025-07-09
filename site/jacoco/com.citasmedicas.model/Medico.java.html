@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Medico.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">citasmedicas</a> &gt; <a href="index.source.html" class="el_package">com.citasmedicas.model</a> &gt; <span class="el_source">Medico.java</span></div><h1>Medico.java</h1><pre class="source lang-java linenums">package com.citasmedicas.model;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+@Entity
+<span class="fc" id="L16">public class Medico {</span>
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotNull(message = &quot;El nombre del médico es obligatorio&quot;)
+    @Size(min = 3, message = &quot;El nombre debe tener al menos 3 caracteres&quot;)
+    private String nombre;
+
+    @NotNull(message = &quot;La especialidad es obligatoria&quot;)
+    private String especialidad;
+
+    @OneToMany(mappedBy = &quot;medico&quot;)
+    @JsonIgnore
+    private List&lt;Cita&gt; citas;
+
+
+    // Getters y Setters
+    public List&lt;Cita&gt; getCitas() {
+<span class="nc" id="L36">    return citas;</span>
+}
+
+public void setCitas(List&lt;Cita&gt; citas) {
+<span class="nc" id="L40">    this.citas = citas;</span>
+<span class="nc" id="L41">}</span>
+
+    public Long getId() {
+<span class="nc" id="L44">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L48">        this.id = id;</span>
+<span class="fc" id="L49">    }</span>
+
+    public String getNombre() {
+<span class="nc" id="L52">        return nombre;</span>
+    }
+
+    public void setNombre(String nombre) {
+<span class="fc" id="L56">        this.nombre = nombre;</span>
+<span class="fc" id="L57">    }</span>
+
+    public String getEspecialidad() {
+<span class="nc" id="L60">        return especialidad;</span>
+    }
+
+    public void setEspecialidad(String especialidad) {
+<span class="fc" id="L64">        this.especialidad = especialidad;</span>
+<span class="fc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

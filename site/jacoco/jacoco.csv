@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+citasmedicas,com.citasmedicas.model,Paciente,37,15,0,0,15,7,11,4,11,4
+citasmedicas,com.citasmedicas.model,Cita,25,11,0,0,9,5,7,3,7,3
+citasmedicas,com.citasmedicas.model,Medico,16,15,0,0,6,7,5,4,5,4
+citasmedicas,com.citasmedicas.service,CitaService,0,21,0,0,0,7,0,4,0,4
+citasmedicas,com.citasmedicas.service,MedicoService,0,21,0,0,0,7,0,4,0,4
+citasmedicas,com.citasmedicas.service,PacienteService,0,26,0,0,0,8,0,5,0,5
+citasmedicas,com.citasmedicas.controller,PacienteController,5,17,0,0,1,5,1,4,1,4
+citasmedicas,com.citasmedicas.controller,CitaController,0,20,0,0,0,7,0,4,0,4
+citasmedicas,com.citasmedicas.controller,MedicoController,0,17,0,0,0,5,0,4,0,4
+citasmedicas,com.citasmedicas,CitasmedicasApplication,5,3,0,0,2,1,1,1,1,1
